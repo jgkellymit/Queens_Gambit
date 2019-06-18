@@ -6,7 +6,7 @@
 
 
 .black{
-    background-color: black;
+    background-color: green;
     border: black;
 }
 
@@ -17,15 +17,32 @@
 
 table {
     border-collapse: collapse;
+    table-layout:fixed;
+    overflow:hidden;
 
 }
 
 tr, td {
+    table-layout:fixed;
+    overflow:hidden;
+    width:37px;
+    height:37px;
     /*border: 1px solid black;*/
 }
 
-#test{
+#outer_box{
     border: 1px solid black;
     display: inline-block;
     padding: 1px;
+}
+
+.piece_image{
+    max-width:37px;
+    max-height:37px;
+}
+
+.square{
+    max-width:37px;
+    max-height:37px;
+    display: block;
 }
