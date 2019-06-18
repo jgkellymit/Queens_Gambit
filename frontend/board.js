@@ -44,6 +44,24 @@ function place_pawn(click_event) {
     div.className = "square";
     div.appendChild(pawn_elem);
     td.appendChild(div);
+    relay_pawn_place();
+}
+
+function relay_pawn_place(){
+
+    $(function() {
+        $.ajax({
+            type: 'POST',
+            url: "http://localhost:5000/test",
+            data: "jack",
+            success: function(response) {
+                console.log(response)
+            },
+            error: function(error) {
+                console.log(error)
+            }
+        });
+    });
 }
 
 

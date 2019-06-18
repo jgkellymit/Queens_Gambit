@@ -1,5 +1,5 @@
-from pieces.piece import Piece
-from position import Position
+from backend.pieces.piece import Piece
+from backend.position import Position
 
 
 class King(Piece):

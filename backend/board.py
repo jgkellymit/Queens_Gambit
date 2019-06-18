@@ -1,6 +1,6 @@
-from pieces.piece import Piece
-from position import Position
-from parameters import BOARD_SIZE
+from backend.pieces.piece import Piece
+from backend.position import Position
+from backend.parameters import BOARD_SIZE
 from typing import Dict
 
 

@@ -1,6 +1,7 @@
-from pieces.piece import Piece
-from position import Position
-from board import Board
+from backend.pieces.piece import Piece
+from backend.position import Position
+from backend.board import Board
+
 
 class Pawn(Piece):
 
