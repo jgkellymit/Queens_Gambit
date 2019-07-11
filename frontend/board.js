@@ -113,5 +113,9 @@ function move_pieces(){
     // to see if the potential move is legal. If it is move the piece, if not don't. TODO: Some sort of confirmation message?
 }
 
+function upgrade_piece(){
+    // Once you lose a piece, at the beginning of your turn you can choose a piece to upgrade
+}
+
 
 

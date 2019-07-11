@@ -8,6 +8,8 @@ Board Game similar to Chess
 - Place pieces one by one, who places first goes first (advantage to place second)
 - Place pieces in first (1-4?) rows
 
+- Pieces could be all pawns -- or could be a mix of pieces
+
 
 Variant 1
 - When you lose a tile you can upgrade a single piece 
