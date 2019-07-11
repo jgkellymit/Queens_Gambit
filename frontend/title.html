@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queens Gambit</title>
+
+</head>
+<body>
+    <h3>Queens Gambit</h3>
+    <div>
+        Player Name: <input id="player_name" type="text" placeholder="Player1"><br>
+    </div>
+    <div>
+        Click to Begin
+        <button id="start-btn" type="button">Play</button>
+    </div>
+    <div id="wait-box"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+$('#start-btn').click(function(e) {
+    var p_name = $('#player_name').val();
+    document.cookie = p_name;
+    // $('#wait-box').innerHTML = "Waiting for an opponent to join...";
+    document.getElementById("wait-box").innerText = "\nWaiting for an opponent to join...";
+    // $('#start-btn').disabled(); TODO
+
+    $.ajax({
+        type: 'POST',
+        url: "http://localhost:5000/start",
+        data: p_name,
+        success: function(response) {
+            // window.location.href = "board.html";
+
+            console.log(response)
+        },
+        error: function(error) {
+            console.log(error)
+        }
+    });
+
+});
+
+</script>
+</body>
+
+</html>
