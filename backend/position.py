@@ -12,6 +12,15 @@ class Position:
         self.x = x
         self.y = y
 
+    def __hash__(self):
+        return hash((self.x, self.y))
+
+    def __eq__(self, other):
+        if not type(other) == Position:
+            return False
+        else:
+            return self.x == other.x and self.y == other.y
+
     def to_string(self):
         return str(self.x) + "_" + str(self.y)
 

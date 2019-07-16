@@ -56,18 +56,18 @@ function place_pawn(click_event) {
     div.className = "square";
     div.appendChild(pawn_elem);
     td.appendChild(div);
-    relay_pawn_place(click_event);
-}
 
-function relay_pawn_place(event){
-    // Send message to server with pawn place -- necessary?
-    console.log(event.path);
-    var selectedText = "jack";
+    console.log(event.target.id)
+    console.log(localStorage.getItem("playerName"))
 
     $.ajax({
         type: 'POST',
-        url: "http://localhost:5000/test",
-        data: {"position": event.path[0].id},
+        url: "http://localhost:5000/place_piece",
+        data: {
+            "position": event.target.id,
+            "player": localStorage.getItem("playerName"),
+            "pieceType": "P" //TODO
+        },
         success: function(response) {
             console.log(response)
         },
@@ -75,7 +75,6 @@ function relay_pawn_place(event){
             console.log(error)
         }
     });
-
 }
 
 function place_pieces_from_server(matrix){

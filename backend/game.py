@@ -1,4 +1,5 @@
 from backend.board import Board
+from backend.pieces.piece import Piece
 from backend.position import Position
 
 class Game:
@@ -18,6 +19,17 @@ class Game:
         :return: Boolean
         """
         pass
+
+    def place_piece(self, player: str, pos: Position, piece_type: str):
+        """
+        Check if a move is a valid move
+        :param player: Player who moves
+        :param pos: Position of added piece
+        :param piece_type: Type of piece
+        :return: Boolean
+        """
+        placed_piece = Piece(pos, player, self)
+        return self.board.place_piece(pos, placed_piece)
 
     def move_piece(self, player: str, pos1: Position, pos2: Position):
         """
