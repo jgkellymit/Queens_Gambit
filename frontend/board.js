@@ -1,8 +1,7 @@
-// These variables need to be pulled in from the cookies or gotten from the server somehow
-var player = "Jack";
-var opponent = "Michelle";
-
 function make_board() {
+    var player = localStorage.getItem("playerName");
+    var opponent = localStorage.getItem("opponentName");
+
     // Create a board for gameplay
     var title = document.createElement("div");
     title.innerText = player + " vs " + opponent;

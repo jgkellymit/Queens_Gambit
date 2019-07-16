@@ -1,4 +1,4 @@
-from parameters import BOARD_SIZE
+from backend.parameters import BOARD_SIZE
 
 class Position:
 
